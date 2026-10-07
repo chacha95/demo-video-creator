@@ -6,10 +6,15 @@
 
 같은 스킬로 **영어판과 한국어판**을 모두 만들 수 있습니다. 아래 두 영상이 이 스킬로 만든 결과물입니다.
 
-| English | 한국어 |
-|---|---|
-| [![English demo](media/poster_en.jpg)](media/demo_en.mp4) | [![Korean demo](media/poster_ko.jpg)](media/demo_ko.mp4) |
-| [▶ Watch `demo_en.mp4`](media/demo_en.mp4) (45초) | [▶ `demo_ko.mp4` 보기](media/demo_ko.mp4) (40초) |
+### English (45초)
+
+https://github.com/user-attachments/assets/2bb0fb3f-6a43-4286-9b37-9b6d64b53fde
+
+### 한국어 (40초)
+
+https://github.com/user-attachments/assets/3db6c46b-8cc2-4b96-a896-14263fa45057
+
+1080p 원본: [`media/demo_en.mp4`](media/demo_en.mp4) · [`media/demo_ko.mp4`](media/demo_ko.mp4)
 
 두 영상 모두 [Evals](https://evals.ag) 데모입니다. 스토리와 모션 문법은 같고, 목소리·카피·한글 서체만 바뀝니다.
 

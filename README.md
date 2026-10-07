@@ -6,10 +6,15 @@ An agent skill that turns a product URL into a finished **16:9 launch film**: re
 
 The same skill makes the film in **English or Korean**. Both demos below came out of it:
 
-| English | 한국어 |
-|---|---|
-| [![English demo](media/poster_en.jpg)](media/demo_en.mp4) | [![Korean demo](media/poster_ko.jpg)](media/demo_ko.mp4) |
-| [▶ Watch `demo_en.mp4`](media/demo_en.mp4) (45s) | [▶ `demo_ko.mp4` 보기](media/demo_ko.mp4) (40s) |
+### English (45s)
+
+https://github.com/user-attachments/assets/2bb0fb3f-6a43-4286-9b37-9b6d64b53fde
+
+### 한국어 (40s)
+
+https://github.com/user-attachments/assets/3db6c46b-8cc2-4b96-a896-14263fa45057
+
+Full 1080p files: [`media/demo_en.mp4`](media/demo_en.mp4) · [`media/demo_ko.mp4`](media/demo_ko.mp4)
 
 Both are for [Evals](https://evals.ag). Same story and the same motion grammar. Only the voice, the copy and the Korean typeface change.
 
