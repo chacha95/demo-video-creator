@@ -1,0 +1,41 @@
+{
+ "skill_name": "demo-video-creator",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "evals.ag 1분짜리 가로 데모 영상 하나 뽑아줘. 처음 보는 사람도 바로 이해되게.",
+   "expected_output": "One 1920x1080 ~60s mp4 for Evals: clear 3s hook with same-prompt real outputs, continuous emotive English VO, beat-locked motion, game/video outputs (no websites), clean crops, -14 LUFS.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 50-75s (~1 minute)",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "Has a voiceover/speech-band content",
+    "Wrote SCRIPT.md"
+   ]
+  },
+  {
+   "id": 2,
+   "prompt": "skills.ag 제품 소개 영상 이 감도로 만들어줘 (가로, 1분 정도)",
+   "expected_output": "One 1920x1080 ~60s mp4 for Skillshop (skills.ag) using real captures of the site, same motion/VO/mix recipe, only real features/numbers.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 50-75s (~1 minute)",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "Has a voiceover/speech-band content",
+    "Wrote SCRIPT.md"
+   ]
+  }
+ ]
+}
