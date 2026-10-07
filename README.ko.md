@@ -6,11 +6,11 @@
 
 같은 스킬로 **영어판과 한국어판**을 모두 만들 수 있습니다. 아래 두 영상이 이 스킬로 만든 결과물입니다.
 
-### English (45초)
+### English (40초)
 
 https://github.com/user-attachments/assets/2bb0fb3f-6a43-4286-9b37-9b6d64b53fde
 
-### 한국어 (40초)
+### 한국어 (45초)
 
 https://github.com/user-attachments/assets/3db6c46b-8cc2-4b96-a896-14263fa45057
 
