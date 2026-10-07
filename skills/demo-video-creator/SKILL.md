@@ -22,10 +22,12 @@ This is the one moment you may stop and ask. Check everything in a single pass a
 Check:
 ```bash
 grep -q '^ELEVENLABS_API_KEY=.' .env 2>/dev/null || [ -n "$ELEVENLABS_API_KEY" ] && echo "key ok" || echo "ELEVENLABS_API_KEY missing"
-curl -s -o /dev/null -w "%{http_code}\n" https://api.elevenlabs.io/v1/user -H "xi-api-key: $(grep '^ELEVENLABS_API_KEY=' .env | cut -d= -f2-)"   # 200 = valid
+H=$(mktemp); chmod 600 "$H"   # key goes through a header file, never on the command line
+printf 'xi-api-key: %s\n' "${ELEVENLABS_API_KEY:-$(grep '^ELEVENLABS_API_KEY=' .env | cut -d= -f2-)}" > "$H"
+curl -s -o /dev/null -w "%{http_code}\n" -H @"$H" https://api.elevenlabs.io/v1/user; rm -f "$H"   # 200 = valid
 which ffmpeg node npx whisper-cli; node -e "require.resolve('playwright')" && echo "playwright ok"
 ```
-Never print the key value in chat or logs.
+Never print the key value in chat or logs, and never put it in a command-line argument (use `-H @file` as above).
 
 If the key is missing or not 200, tell the user (in Korean if they write Korean) how to get it:
 

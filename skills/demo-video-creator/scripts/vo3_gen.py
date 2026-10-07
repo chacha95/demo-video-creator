@@ -18,7 +18,14 @@ def find_key(name='ELEVENLABS_API_KEY'):
         d=os.path.dirname(d)
     sys.exit(f"{name} not found. See 'Onboarding: keys' in SKILL.md, then add {name}=... to the repo-root .env")
 key=find_key()
-subprocess.run(['curl','-s','-X','POST','https://api.elevenlabs.io/v1/text-to-speech/bIHbv24MWmeRgasZH58o/with-timestamps?output_format=mp3_44100_192','-H','xi-api-key: '+key,'-H','Content-Type: application/json','--data-binary','@audio/vo3/req.json','-o','audio/vo3/take.json'],check=True)
+# pass the key through a 0600 temp header file so it never appears in argv / ps
+import tempfile
+fd,hdr=tempfile.mkstemp(prefix='xi-hdr-'); os.chmod(hdr,0o600)
+try:
+    with os.fdopen(fd,'w') as f: f.write('xi-api-key: '+key+'\n')
+    subprocess.run(['curl','-s','-X','POST','https://api.elevenlabs.io/v1/text-to-speech/bIHbv24MWmeRgasZH58o/with-timestamps?output_format=mp3_44100_192','-H','@'+hdr,'-H','Content-Type: application/json','--data-binary','@audio/vo3/req.json','-o','audio/vo3/take.json'],check=True)
+finally:
+    os.remove(hdr)
 d=json.load(open('audio/vo3/take.json'))
 open('audio/vo3/take.mp3','wb').write(base64.b64decode(d['audio_base64']))
 a=d['alignment']; C=''.join(a['characters']); S=a['character_start_times_seconds']; E=a['character_end_times_seconds']
