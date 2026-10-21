@@ -1,3 +1,4 @@
+# BPM + beat phase + strong hits for each music file. usage: python3 beats.py assets/music/m*.mp3  (env LO/HI bpm range, OUT path)
 import subprocess, sys, json, numpy as np
 SR=22050
 import os; LO=float(os.environ.get("LO",70)); HI=float(os.environ.get("HI",181))
@@ -32,4 +33,4 @@ for p in sys.argv[1:]:
     out[p]={'bpm':round(float(bpm),2),'beat_phase_s':round(float(ph),3),'sound_start_s':round(start,3),'last_loud_s':round(last_loud,3),'dur':round(end,3),
             'strong_hits_s':[round(i*dt,3) for i in peaks][:60]}
     print(p,out[p]['bpm'],out[p]['beat_phase_s'],start,last_loud,end)
-json.dump(out,open('assets/music/beats.json','w'),indent=1)
+import os; os.makedirs('assets/music',exist_ok=True); json.dump(out,open(os.environ.get('OUT','assets/music/beats.json'),'w'),indent=1)

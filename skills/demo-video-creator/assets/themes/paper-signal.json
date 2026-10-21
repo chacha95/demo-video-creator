@@ -1,0 +1,78 @@
+{
+ "name": "paper-signal",
+ "description": "Swiss instrument look on one warm-paper canvas, electric-blue accent, Geist + Geist Mono data tags. The light half of the old 'Signal' system, without the dark switches.",
+ "best_for": [
+  "saas-workflow",
+  "feature-launch",
+  "marketplace-catalog"
+ ],
+ "colors": {
+  "paper": "#EEEDE8",
+  "surface": "#F7F6F2",
+  "type": "#EEEDE8",
+  "chip": "#E2E1DB",
+  "line": "#D6D5CF",
+  "ink": "#1D1E21",
+  "inkDeep": "#111214",
+  "muted": "#6E7076",
+  "dark": "#0C0D0F",
+  "onDark": "#F3F2EE",
+  "mutedDark": "#7D8088",
+  "accent": "#2F5BFF",
+  "accentDark": "#6F8CFF",
+  "accentLight": "#9FB2FF",
+  "hues": [
+   "#2F5BFF",
+   "#0E9F6E",
+   "#D97706",
+   "#7C3AED"
+  ],
+  "card": "#FFFFFF",
+  "dot": "#DEDDD7",
+  "onDarkSoft": "#C9CBD1",
+  "darkDeep": "#08090B",
+  "shadowRGB": "17,18,20"
+ },
+ "fonts": {
+  "head": "\"Geist\", system-ui, sans-serif",
+  "ui": "\"Geist\", \"Pretendard\", system-ui, sans-serif",
+  "mono": "\"Geist Mono\", ui-monospace, monospace",
+  "load": [
+   [
+    "500",
+    "Geist"
+   ],
+   [
+    "600",
+    "Geist"
+   ],
+   [
+    "500",
+    "Geist Mono"
+   ]
+  ]
+ },
+ "font_files": [
+  {
+   "family": "Geist",
+   "fontsource": "geist-sans",
+   "weights": [
+    500,
+    600,
+    700
+   ]
+  },
+  {
+   "family": "Geist Mono",
+   "fontsource": "geist-mono",
+   "weights": [
+    500
+   ]
+  },
+  {
+   "family": "Pretendard",
+   "file": "PretendardVariable.woff2",
+   "weight": "100 900"
+  }
+ ]
+}

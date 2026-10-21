@@ -1,0 +1,83 @@
+{
+ "name": "clean-violet",
+ "description": "Pure white canvas, grey ink, one violet accent. Matches the video-generator house rules (bg-white / gray-600-800 / violet-600). Default for B2B SaaS and Korean-market films.",
+ "best_for": [
+  "saas-workflow",
+  "before-after",
+  "browser-extension",
+  "feature-launch"
+ ],
+ "colors": {
+  "paper": "#FFFFFF",
+  "surface": "#FFFFFF",
+  "type": "#FFFFFF",
+  "chip": "#F3F4F6",
+  "line": "#E5E7EB",
+  "ink": "#374151",
+  "inkDeep": "#111827",
+  "muted": "#6B7280",
+  "dark": "#111827",
+  "onDark": "#F9FAFB",
+  "mutedDark": "#9CA3AF",
+  "accent": "#7C3AED",
+  "accentDark": "#A78BFA",
+  "accentLight": "#C4B5FD",
+  "hues": [
+   "#7C3AED",
+   "#2563EB",
+   "#059669",
+   "#D97706"
+  ],
+  "card": "#FFFFFF",
+  "dot": "#E5E7EB",
+  "onDarkSoft": "#D1D5DB",
+  "darkDeep": "#030712",
+  "shadowRGB": "17,24,39"
+ },
+ "fonts": {
+  "head": "\"Inter\", \"Pretendard\", system-ui, sans-serif",
+  "ui": "\"Inter\", \"Pretendard\", system-ui, sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "load": [
+   [
+    "500",
+    "Inter"
+   ],
+   [
+    "600",
+    "Inter"
+   ],
+   [
+    "800",
+    "Inter"
+   ],
+   [
+    "500",
+    "JetBrains Mono"
+   ]
+  ]
+ },
+ "font_files": [
+  {
+   "family": "Inter",
+   "fontsource": "inter",
+   "weights": [
+    500,
+    600,
+    800
+   ]
+  },
+  {
+   "family": "JetBrains Mono",
+   "fontsource": "jetbrains-mono",
+   "weights": [
+    500
+   ]
+  },
+  {
+   "family": "Pretendard",
+   "file": "PretendardVariable.woff2",
+   "weight": "100 900"
+  }
+ ]
+}

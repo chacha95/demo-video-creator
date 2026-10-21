@@ -1,0 +1,89 @@
+{
+ "name": "editorial-cream",
+ "description": "Cream paper, ink type with an Instrument Serif display face and a coral accent. Magazine feel for creative tools, marketplaces and teasers.",
+ "best_for": [
+  "marketplace-catalog",
+  "teaser",
+  "ai-output-battle"
+ ],
+ "colors": {
+  "paper": "#F6F1E7",
+  "surface": "#FBF8F2",
+  "type": "#F6F1E7",
+  "chip": "#ECE5D8",
+  "line": "#DDD4C4",
+  "ink": "#3A322B",
+  "inkDeep": "#1F1A16",
+  "muted": "#857A6E",
+  "dark": "#1C1815",
+  "onDark": "#F6F1E7",
+  "mutedDark": "#8E8478",
+  "accent": "#C2462E",
+  "accentDark": "#E36A50",
+  "accentLight": "#EBB0A2",
+  "hues": [
+   "#8E64AD",
+   "#337CA8",
+   "#438261",
+   "#C9902F"
+  ],
+  "card": "#FFFFFF",
+  "dot": "#E6DDCE",
+  "onDarkSoft": "#D3CABE",
+  "darkDeep": "#100D0B",
+  "shadowRGB": "31,26,22"
+ },
+ "fonts": {
+  "head": "\"Instrument Serif\", Georgia, serif",
+  "ui": "\"Inter\", \"Pretendard\", system-ui, sans-serif",
+  "mono": "\"IBM Plex Mono\", ui-monospace, monospace",
+  "load": [
+   [
+    "400",
+    "Instrument Serif"
+   ],
+   [
+    "500",
+    "Inter"
+   ],
+   [
+    "600",
+    "Inter"
+   ],
+   [
+    "500",
+    "IBM Plex Mono"
+   ]
+  ]
+ },
+ "font_files": [
+  {
+   "family": "Instrument Serif",
+   "fontsource": "instrument-serif",
+   "weights": [
+    400
+   ]
+  },
+  {
+   "family": "Inter",
+   "fontsource": "inter",
+   "weights": [
+    500,
+    600,
+    800
+   ]
+  },
+  {
+   "family": "IBM Plex Mono",
+   "fontsource": "ibm-plex-mono",
+   "weights": [
+    500
+   ]
+  },
+  {
+   "family": "Pretendard",
+   "file": "PretendardVariable.woff2",
+   "weight": "100 900"
+  }
+ ]
+}

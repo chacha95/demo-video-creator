@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>__NAME__ — demo film</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="assets/fonts/fonts.css" />
+<style>
+  html, body { margin: 0; background: var(--paper, #FFFFFF); }
+  #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--paper, #FFFFFF); }
+  #cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 540px; }
+  .seg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; visibility: hidden; }
+  #pool { position: absolute; left: 0; top: 0; width: 0; height: 0; overflow: hidden; }
+  .vw { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; display: none; }
+  .vw video { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+</style>
+</head>
+<body>
+<!-- data-duration must equal the last shot's end (seconds). Keep one host .seg per shot. -->
+<div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="12">
+  <div id="cam">
+    <div id="s_hook" class="seg"></div>
+    <div id="s_line" class="seg"></div>
+    <div id="s_ui" class="seg"></div>
+    <div id="s_stat" class="seg"></div>
+    <div id="s_end" class="seg"></div>
+  </div>
+  <!-- Framework-owned media: every <video> is a clip with its own timing. Devices adopt the .vw wrapper by id. -->
+  <div id="pool">
+    <div class="vw" id="vw_a"><video id="v_a" class="clip" src="capture/clips/a.mp4" data-start="0" data-duration="2.6" data-media-start="0" data-track-index="1" muted playsinline></video></div>
+    <div class="vw" id="vw_b"><video id="v_b" class="clip" src="capture/clips/b.mp4" data-start="0" data-duration="2.6" data-media-start="0" data-track-index="2" muted playsinline></video></div>
+  </div>
+</div>
+<script src="build/theme.js"></script>
+<script src="build/motion-kit.js"></script>
+<script>
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  EM.theme(window.THEME);
+  document.documentElement.style.setProperty("--paper", EM.C.paper);
+
+  /* SHOTS: [host id, start s, end s, build(host) -> {render(lf)}]. Cut points come from the VO take + beat grid
+     (SKILL.md §7): each cut sits on the beat at or just before the first word of its phrase. Replace every string
+     and capture with REAL ones from your product — nothing here may ship as-is. */
+  const SHOTS = [
+    ["s_hook", 0.0, 2.6, (h) => EM.split(h, { a: { node: $("vw_a"), label: "__A_LABEL__" }, b: { node: $("vw_b"), label: "__B_LABEL__" }, vs: true, from: 0.5, to: 0.5 })],
+    ["s_line", 2.6, 4.6, (h) => EM.headline(h, { tag: "__TAG__", lines: [["__Line", "one"], ["__line", "two."]], accent: ["two."], fs: 150, holdTo: 60 })],
+    ["s_ui", 4.6, 8.4, (h) => EM.uiCard(h, { src: "capture/ui/main.png", w: 2880, h: 1800, focus: { at: 52, rect: [1700, 1300, 900, 360], zoom: 0.62 },
+      cursor: [{ f: 14, x: 1100, y: 900 }, { f: 30, x: 2150, y: 1480 }, { f: 44, x: 2150, y: 1480, click: true }], holdTo: 110 })],
+    ["s_stat", 8.4, 9.9, (h) => EM.counter(h, { value: 12345, label: "__real label from your capture__", holdTo: 45 })],
+    ["s_end", 9.9, 12.0, (h) => EM.endCard(h, { word: "__NAME__", sub: "__domain__", endPushAt: 40 })],
+  ];
+  // impact hits (seconds) for the camera punch; the BIG list in post.json should match these cuts
+  const HITS = [2.6, 4.6, 9.9];
+
+  window.__timelines = window.__timelines || {};
+  EM.ready().then(() => { // build devices only after fonts load: they measure text at construction
+    const segs = SHOTS.map(([id, a, b, fn]) => { const host = $(id), d = fn(host); return { start: a, dur: b - a, speed: 1, from: 0, host, render: (lf) => d.render(lf) }; });
+    window.__timelines["main"] = EM.film({ id: "main", duration: 12, cam: $("cam"), segments: segs,
+      post: { hits: HITS, amp: 0.02, tau: 0.25, push: 0.04, pushFrom: 10.6, pushTo: 12 } });
+  });
+})();
+</script>
+</body>
+</html>
