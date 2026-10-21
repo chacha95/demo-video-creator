@@ -1,0 +1,81 @@
+{
+ "name": "terminal-night",
+ "description": "One deep-graphite canvas for the WHOLE film (no light switches), mint accent, JetBrains Mono for commands. For CLIs, SDKs, APIs, coding agents.",
+ "best_for": [
+  "devtool-cli"
+ ],
+ "colors": {
+  "paper": "#0B0D10",
+  "surface": "#14171C",
+  "type": "#0B0D10",
+  "chip": "#1C2027",
+  "line": "#252A32",
+  "ink": "#C9D1D9",
+  "inkDeep": "#F0F3F6",
+  "muted": "#7D8590",
+  "dark": "#14171C",
+  "onDark": "#E6EDF3",
+  "mutedDark": "#7D8590",
+  "accent": "#3DDC97",
+  "accentDark": "#3DDC97",
+  "accentLight": "#9EEFC9",
+  "hues": [
+   "#3DDC97",
+   "#58A6FF",
+   "#F2CC60",
+   "#D2A8FF"
+  ],
+  "card": "#1C2027",
+  "dot": "#1A1E24",
+  "onDarkSoft": "#ADBAC7",
+  "darkDeep": "#05070A",
+  "shadowRGB": "0,0,0"
+ },
+ "fonts": {
+  "head": "\"Geist\", system-ui, sans-serif",
+  "ui": "\"Geist\", \"Pretendard\", system-ui, sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "load": [
+   [
+    "500",
+    "Geist"
+   ],
+   [
+    "600",
+    "Geist"
+   ],
+   [
+    "400",
+    "JetBrains Mono"
+   ],
+   [
+    "500",
+    "JetBrains Mono"
+   ]
+  ]
+ },
+ "font_files": [
+  {
+   "family": "Geist",
+   "fontsource": "geist-sans",
+   "weights": [
+    500,
+    600,
+    700
+   ]
+  },
+  {
+   "family": "JetBrains Mono",
+   "fontsource": "jetbrains-mono",
+   "weights": [
+    400,
+    500
+   ]
+  },
+  {
+   "family": "Pretendard",
+   "file": "PretendardVariable.woff2",
+   "weight": "100 900"
+  }
+ ]
+}

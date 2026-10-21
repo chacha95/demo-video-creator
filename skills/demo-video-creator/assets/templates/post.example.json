@@ -1,0 +1,18 @@
+{
+ "raw": "renders/raw.mp4",
+ "out": "renders/__NAME__.mp4",
+ "frames": 1800,
+ "vo": { "take": "audio/vo3/take.mp3", "offset": 0.25, "lufs": -16 },
+ "words": "audio/vo3/words.json",
+ "music": { "src": "assets/music/m1.mp3", "segments": [[0, 60, 0]], "duck_db": -6, "gain_db": -1.5, "fade_out": 0.5 },
+ "fx": { "big": [0.2, 12.2, 32.2, 48.2, 58.2], "med": [3.2, 7.7, 20.2, 40.2], "flash": { "12.2": 0.5, "32.2": 0.8 } },
+ "sfx": {
+  "dir": "audio/sfx", "bus_db": -5, "auto_big": true,
+  "events": [
+   { "word": "send", "kind": "click", "vol": 0.8, "lead": 0.066 },
+   { "t": 9.4, "kind": "keys", "vol": 0.45, "trim": 1.2 },
+   { "t": 24.2, "kind": "whip", "vol": 0.5 }
+  ]
+ },
+ "master": { "lufs": -14, "tp": -1.5 }
+}

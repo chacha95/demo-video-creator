@@ -4,37 +4,191 @@
   {
    "id": 1,
    "prompt": "evals.ag 1분짜리 가로 데모 영상 하나 뽑아줘. 처음 보는 사람도 바로 이해되게.",
-   "expected_output": "One 1920x1080 ~60s mp4 for Evals: clear 3s hook with same-prompt real outputs, continuous emotive English VO, beat-locked motion, game/video outputs (no websites), clean crops, -14 LUFS.",
+   "expected_output": "ai-output-battle: one 1920x1080 ~60s mp4 for Evals, 3s hook = same-prompt real outputs split 50/50, one-take English VO, beat-locked motion, game/video outputs (no websites), #F7F4ED canvas, -14 LUFS.",
    "files": [],
    "assertions": [
     "Delivers exactly one mp4",
     "Landscape 1920x1080",
     "30fps",
-    "Duration 50-75s (~1 minute)",
+    "Duration 45-65s",
     "Has audio track",
     "Master loudness -14 LUFS +-1",
     "No frozen hold >=0.7s (before last 0.5s)",
     "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = ai-output-battle",
     "Has a voiceover/speech-band content",
-    "Wrote SCRIPT.md"
+    "Background tone constant (no dark mid-film section)"
    ]
   },
   {
    "id": 2,
    "prompt": "skills.ag 제품 소개 영상 이 감도로 만들어줘 (가로, 1분 정도)",
-   "expected_output": "One 1920x1080 ~60s mp4 for Skillshop (skills.ag) using real captures of the site, same motion/VO/mix recipe, only real features/numbers.",
+   "expected_output": "marketplace-catalog: one ~55s mp4 for Skillshop: hook = wall of real skills + the live count, search → one skill → its real output, same motion/VO/mix recipe, only real numbers.",
    "files": [],
    "assertions": [
     "Delivers exactly one mp4",
     "Landscape 1920x1080",
     "30fps",
-    "Duration 50-75s (~1 minute)",
+    "Duration 45-60s",
     "Has audio track",
     "Master loudness -14 LUFS +-1",
     "No frozen hold >=0.7s (before last 0.5s)",
     "Energetic cutting >= 3 cuts per 10s",
-    "Has a voiceover/speech-band content",
-    "Wrote SCRIPT.md"
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = marketplace-catalog",
+    "Has a voiceover/speech-band content"
+   ]
+  },
+  {
+   "id": 3,
+   "prompt": "https://linear.app 같은 협업툴 우리 서비스 https://app.example-crm.com 데모 영상 만들어줘. 고객 데이터 노출 안 되게.",
+   "expected_output": "saas-workflow: ~60s mp4, hook = the finished result alive, one real job end to end in a seeded demo workspace (no real customer data), uiCard focus punches with cursor, clean-violet/brand theme.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 45-75s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = saas-workflow",
+    "No real customer names or emails on screen (seeded demo data logged in DECISIONS.md)"
+   ]
+  },
+  {
+   "id": 4,
+   "prompt": "Make a 45s launch video for our CLI (npx acme deploy). Dark, dev-friendly.",
+   "expected_output": "devtool-cli: ~45-50s mp4, terminal-night theme dark throughout, hook = deployed result then the one command, real command output only, install command on the end card.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 40-60s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = devtool-cli",
+    "Terminal output on screen matches a real run log saved in capture/"
+   ]
+  },
+  {
+   "id": 5,
+   "prompt": "우리 iOS 앱 소개 영상 가로로 40초짜리. 시뮬레이터에서 찍어줘.",
+   "expected_output": "mobile-app: ~40s mp4, simulator recordings with clean 9:41 status bar, phone screens as rounded cards (no drawn bezels), touch discs, money screen in the hook.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 30-60s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = mobile-app",
+    "No drawn device frame/bezel"
+   ]
+  },
+  {
+   "id": 6,
+   "prompt": "이번에 나온 'Auto-summary' 기능만 30초 신기능 영상으로 뽑아줘. X에 올릴 거야.",
+   "expected_output": "feature-launch: one ~30s mp4: NEW tag + feature mid-action at frame 0, three uses, one-take VO of ~80 words, plus a launch post that introduces the product first.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 20-40s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = feature-launch",
+    "Frame 0 already shows the feature in action (no logo intro)"
+   ]
+  },
+  {
+   "id": 7,
+   "prompt": "런칭 전에 15초 티저 하나 만들어줘. 음악 위주로.",
+   "expected_output": "teaser: one 12-20s music-led mp4, 3-5 strongest real shots one per bar, <= 1 VO line, silence before the final hit, ends on URL/date.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 12-20s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = teaser",
+    "No shot shorter than 1 beat (no footage strobes)"
+   ]
+  },
+  {
+   "id": 8,
+   "prompt": "받아쓰기 앱인데, 손으로 타이핑하는 거랑 비교하는 before/after 데모 영상 40초로.",
+   "expected_output": "before-after: ~40s mp4, split hook with real measured timers on both sides, product finishes first, measured times logged in DECISIONS.md, before side not styled worse.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 30-50s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "Energetic cutting >= 3 cuts per 10s",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Case = before-after",
+    "On-screen times equal the measured times in DECISIONS.md"
+   ]
+  },
+  {
+   "id": 9,
+   "prompt": "크롬 익스텐션 데모 영상 35초. 아무 기사나 클릭 한 번에 요약되는 거 보여줘.",
+   "expected_output": "browser-extension: ~35s mp4, hook = a real public article transforming when the extension acts, extension loaded in a persistent Playwright context, 3-4 real sites one per beat, no hand-drawn browser chrome.",
+   "files": [],
+   "assertions": [
+    "Delivers exactly one mp4",
+    "Landscape 1920x1080",
+    "30fps",
+    "Duration 30-45s",
+    "Has audio track",
+    "Master loudness -14 LUFS +-1",
+    "No frozen hold >=0.7s (before last 0.5s)",
+    "No double cuts",
+    "Wrote SCRIPT.md",
+    "Logged the chosen case in DECISIONS.md",
+    "Energetic cutting >= 3 cuts per 10s",
+    "Case = browser-extension",
+    "No hand-drawn browser chrome"
    ]
   }
  ]

@@ -1,0 +1,80 @@
+{
+ "name": "evals",
+ "description": "Evals house style (approved 2026-10-09). One cream canvas, coral punch word, brand-coloured model pills. Fonts are the site's own (captured from evals.ag) — fetch_fonts.sh cannot download them.",
+ "best_for": [
+  "ai-output-battle"
+ ],
+ "colors": {
+  "paper": "#F7F4ED",
+  "surface": "#FCFAF5",
+  "type": "#F7F4ED",
+  "chip": "#EEE7DC",
+  "line": "#DDD5C9",
+  "ink": "#40352C",
+  "inkDeep": "#2B231D",
+  "muted": "#85796D",
+  "dark": "#181515",
+  "onDark": "#F7F4ED",
+  "mutedDark": "#8C847C",
+  "accent": "#A13A2B",
+  "accentDark": "#E0573F",
+  "accentLight": "#E9A79A",
+  "hues": [
+   "#8E64AD",
+   "#337CA8",
+   "#438261",
+   "#C9902F"
+  ],
+  "card": "#FFFFFF",
+  "dot": "#E6DFD2",
+  "onDarkSoft": "#CFC7BD",
+  "darkDeep": "#0E0C0C",
+  "shadowRGB": "43,35,29"
+ },
+ "fonts": {
+  "head": "\"martina\", Georgia, serif",
+  "ui": "\"diatype\", \"Pretendard\", system-ui, sans-serif",
+  "mono": "\"IBM Plex Mono\", ui-monospace, monospace",
+  "load": [
+   [
+    "400",
+    "diatype"
+   ],
+   [
+    "500",
+    "diatype"
+   ],
+   [
+    "700",
+    "diatype"
+   ],
+   [
+    "400",
+    "martina"
+   ],
+   [
+    "500",
+    "IBM Plex Mono"
+   ]
+  ]
+ },
+ "font_files": [
+  {
+   "family": "IBM Plex Mono",
+   "fontsource": "ibm-plex-mono",
+   "weights": [
+    500
+   ]
+  },
+  {
+   "family": "Pretendard",
+   "file": "PretendardVariable.woff2",
+   "weight": "100 900"
+  }
+ ],
+ "mark": {
+  "svg": "<path d=\"M9 5h14a4 4 0 0 1 0 8H9a4 4 0 0 1 0-8Zm0 0v22m0 0h14a4 4 0 0 0 0-8H9a4 4 0 0 0 0 8Zm14-14V5m0 8v14\"/><path d=\"M13 9h6m-6 14h6\" stroke-width=\"1.6\"/>",
+  "viewBox": "4 4 24 24",
+  "stroke": true
+ }
+}

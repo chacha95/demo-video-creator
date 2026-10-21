@@ -26,7 +26,7 @@ One accent per frame. The accent is used only for the caret, the new-word flash,
 12 columns, 120px outer margins, 8px baseline. Headlines hang from the left margin. UI panes sit on the right 7 columns or full-bleed when punched in.
 
 ## UI treatment (real captures only)
-- Captures are 2× screenshots of the product UI (capture/ui) and screencast recordings of real community outputs (capture/clips).
+- Captures are 2× screenshots of evals-app.vercel.app (capture/ui) and screencast recordings of real community outputs (capture/clips).
 - A pane = a crop of a capture with radius 22px and a soft shadow (dark: `0 40px 120px rgba(0,0,0,.55)`, light: `0 30px 80px rgba(17,18,20,.18)`). No border, no outline, no device frame.
 - Panes enter in 3D (rotateX 10–14°, rotateY −8 to −12°, perspective 2400px) and settle flat with the floaty curve.
 - Depth of field: non-focus parts of a capture get a gaussian blur (6–9px) and the focus region stays sharp.

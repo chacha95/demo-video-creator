@@ -1,0 +1,10 @@
+{
+ "viewport": [1440, 900], "dpr": 4, "storage": "capture/state.json",
+ "hide": ["#intercom-container", ".cookie-banner"],
+ "shots": [
+  { "name": "home", "url": "https://app.example.com/", "wait": 2000 },
+  { "name": "composer", "selector": "form.composer", "pad": 24 },
+  { "name": "settings", "url": "https://app.example.com/settings", "selector": "main section:first-of-type", "pad": 32 },
+  { "name": "results", "url": "https://app.example.com/runs/123", "clip": [120, 180, 1200, 640] }
+ ]
+}

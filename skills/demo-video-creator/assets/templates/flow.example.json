@@ -1,0 +1,13 @@
+{
+ "viewport": [1600, 900], "dpr": 2, "storage": "capture/state.json",
+ "start": "https://app.example.com/projects",
+ "steps": [
+  { "move": "text=New project", "frames": 18 },
+  { "click": "text=New project" },
+  { "type": ["input[name=title]", "Q4 launch plan"], "cps": 14 },
+  { "press": "Enter", "wait": 900, "mark": "created" },
+  { "scroll": 640, "frames": 40 },
+  { "hover": "[data-row='2']", "wait": 600 },
+  { "click": "text=Share", "mark": "share" }
+ ]
+}

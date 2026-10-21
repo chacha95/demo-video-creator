@@ -1,0 +1,80 @@
+{
+ "name": "soft-mobile",
+ "description": "Light cool-grey canvas so white phone screens read as cards, warm coral-orange accent, rounder radii. For iOS/Android app films.",
+ "best_for": [
+  "mobile-app"
+ ],
+ "colors": {
+  "paper": "#F2F3F5",
+  "surface": "#FFFFFF",
+  "type": "#F2F3F5",
+  "chip": "#E6E8EC",
+  "line": "#DADDE2",
+  "ink": "#2A2F36",
+  "inkDeep": "#14171A",
+  "muted": "#737B86",
+  "dark": "#14171A",
+  "onDark": "#F6F7F9",
+  "mutedDark": "#8A929C",
+  "accent": "#FF5A36",
+  "accentDark": "#FF7A5C",
+  "accentLight": "#FFB4A3",
+  "hues": [
+   "#FF5A36",
+   "#3478F6",
+   "#34C759",
+   "#AF52DE"
+  ],
+  "card": "#FFFFFF",
+  "dot": "#E1E4E8",
+  "onDarkSoft": "#C7CCD3",
+  "darkDeep": "#0A0C0E",
+  "shadowRGB": "20,23,26"
+ },
+ "fonts": {
+  "head": "\"Inter\", \"Pretendard\", system-ui, sans-serif",
+  "ui": "\"Inter\", \"Pretendard\", system-ui, sans-serif",
+  "mono": "\"Geist Mono\", ui-monospace, monospace",
+  "load": [
+   [
+    "500",
+    "Inter"
+   ],
+   [
+    "600",
+    "Inter"
+   ],
+   [
+    "800",
+    "Inter"
+   ],
+   [
+    "500",
+    "Geist Mono"
+   ]
+  ]
+ },
+ "font_files": [
+  {
+   "family": "Inter",
+   "fontsource": "inter",
+   "weights": [
+    500,
+    600,
+    800
+   ]
+  },
+  {
+   "family": "Geist Mono",
+   "fontsource": "geist-mono",
+   "weights": [
+    500
+   ]
+  },
+  {
+   "family": "Pretendard",
+   "file": "PretendardVariable.woff2",
+   "weight": "100 900"
+  }
+ ]
+}
